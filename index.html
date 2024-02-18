@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS -->
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/media.css">
+    <title>Infinito</title>
+</head>
+<body>
+    <!-- COMPONENTES -->
+    <div id="particles-js"></div>
+
+    <!-- HEADER -->
+    <header class="header">
+        <p id="buttonFullScreen"><i class="headerIcon fa-solid fa-expand"></i></p>
+        <div id="profileHeader" class="imgProfile"></div>
+    </header>
+
+    <!-- NAV -->
+    <nav class="nav">
+        <button id="buttonTime"><i class="nav_item fa-regular fa-clock"></i></button>
+        <button id="buttonLetter"><i class="nav_item fa-regular fa-file-lines"></i></button>
+        <button id="buttonMusic"><i class="nav_item fa-regular fa-circle-play"></i></button>
+        <button id="buttonQuejas"><i class="nav_item fa-regular fa-envelope"></i></button>
+    </nav>
+
+    <!-- SING IN -->
+    <section id="sectionSingIn" class="componentActive singIn component">
+        <div id="profileSingIn" class="singIn_imgProfile imgProfile"></div>
+        <input id="inputName" class="createProfile_input" type="text" placeholder="¿Cual es tu nombre?">
+        <input id="password" class="createProfile_input" type="password" placeholder="Escribe una contraseña">
+        <input id="confirmPassword" class="createProfile_input" type="password" placeholder="Confirma tu contraseña">
+
+        <p class="createProfile_parraf">Selecciona tu foto de perfil</p>
+        <div class="photosProfile">
+            <div class="profile1 profile" id="1"></div>
+            <div class="profile2 profile" id="2"></div>
+            <div class="profile3 profile" id="3"></div>
+            <div class="profile4 profile" id="4"></div>
+ 
+            <div class="profile5 profile" id="5"></div>
+            <div class="profile6 profile" id="6"></div>
+            <div class="profile7 profile" id="7"></div>
+            <div class="profile8 profile" id="8"></div>
+
+            <div class="profile9 profile" id="9"></div>
+            <div class="profile10 profile" id="10"></div>
+            <div class="profile11 profile" id="11"></div>
+            <div class="profile12 profile" id="12"></div>
+
+            <div class="profile13 profile" id="13"></div>
+            <div class="profile14 profile" id="14"></div>
+            <div class="profile15 profile" id="15"></div>
+            <div class="profile16 profile" id="16"></div>
+        </div>
+
+        <button id="buttonSingIn" class="button">Save</button>
+    </section>
+
+    <!-- TIME -->
+    <section id="sectionTime" class="time component">
+        <div id="meses" class="cardTime">4 meses</div>
+        <div id="dias" class="cardTime">14 días</div>
+        <div id="horas" class="cardTime">8 horas</div>
+        <div id="minutos" class="cardTime">25 minutos</div>
+        <div id="segundos" class="cardTime">12 segundos</div>
+    </section>
+
+    <!-- LETTER -->
+    <section id="sectionLetter" class="sectionLetter component">
+        <a href="./docs/Infinito_Potencialmente_Infinito.pdf" class="letter">
+            <p class="letter_icon"><i class="fa-regular fa-file-lines"></i></p>
+            <p class="letter_title">Infinito Potencialmente Infinito</p>
+        </a>
+    </section>
+
+    <!-- MUSIC -->
+    <section id="sectionMusic" class="music component">
+        <img class="photoAlbum" src="img/photoAlbum.jpg" alt="">
+        <p class="albumName">Esto no es un playlist de amor</p>
+        <audio controls>
+            <source src="./audio/primeraCita.mp3" type="audio/mpeg">
+            Tu navegador no soporta el elemento de audio.
+        </audio>
+        <audio controls>
+            <source src="./audio/miSuerte.mp3" type="audio/mpeg">
+            Tu navegador no soporta el elemento de audio.
+        </audio>
+        <audio controls>
+            <source src="./audio/laPromesa.mp3" type="audio/mpeg">
+            Tu navegador no soporta el elemento de audio.
+        </audio>
+        <audio controls>
+            <source src="./audio/nasa.mp3" type="audio/mpeg">
+            Tu navegador no soporta el elemento de audio.
+        </audio>
+
+        <a href="https://open.spotify.com/playlist/5boWw35qK015oHV3Rmu4fo?si=a9d9709c881b4829"  class="buttonMusic button">Ir a la playlist</a>
+    </section>
+
+    <!-- BUZON DE QUEJAS -->
+    <section id="sectionQuejas" class="quejas component">
+        <div class="conteinerQuejas">
+            <p class="componentQueja">Salir mas seguido</p>
+            <p class="componentQueja">Salir mas seguido</p>
+            <p class="componentQueja">Salir mas seguido</p>
+            <p class="componentQueja">Salir mas seguido</p>
+            <p class="componentQueja">Salir mas seguido</p>
+            <p class="componentQueja">Salir mas seguido</p>
+        </div>
+
+        <div class="messaje">
+            <input class="messajeInput" type="text" placeholder="Mensaje...">
+            <button class="buttonQuejas"><i class="buttonQuejas_icon fa-solid fa-play"></i></button>
+        </div>
+    </section>
+    
+    <!-- SCRIPTS -->
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script src="js/particles.js"></script>
+    <script src="https://kit.fontawesome.com/7b35ff6dce.js" crossorigin="anonymous"></script> 
+    <script type="module" src="js/app.js"></script>
+</body>
+</html> 

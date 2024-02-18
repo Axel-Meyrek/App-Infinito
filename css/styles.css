@@ -1,0 +1,408 @@
+/* IMPORTACIONES */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+/* VARIABLES */
+:root{
+    /* FONTS */
+    --fontMain: "Inter", sans-serif;
+
+    /* COLORES */
+    --colorMain: #555555;
+    --white: #FFFFFF;
+    --black: #000000;
+    --colorDark: #1C1C1C;
+    --colorLigth: #d4d4d4;
+
+    /* FONT-WEIGTH */
+    --extraLigth: 200;
+    --ligth: 300;
+    --regular: 400;
+    --medium: 500;
+    --semiBold: 600;
+    --bold: 700;
+
+    /* SHADOWS */
+    --shadowComponent: 0 4px 4px rgba(0, 0, 0, 0.25);
+
+    /* FONT-SIZE */
+    --small: .9rem;
+    --large: 1.2rem;
+
+    /* BORDER-RADIOS */
+    --border: 10px;
+}
+
+/* NORMALIZACION */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: var(--fontMain);
+    color: var(--black);
+    font-weight: var(--regular);
+    font-size: var(--small);
+}
+
+::-webkit-scrollbar{
+    height: .01rem;
+    width: .01rem;
+}
+
+
+body{
+    background-color: var(--white);
+}
+
+button{
+    background-color: var(--white);
+    border: none;
+    color: var(--white);
+}
+
+#particles-js{
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    z-index: -1;
+}
+
+
+
+.component{
+    width: 90%;
+    margin: 0 auto;
+    padding: 80px 0;
+    overflow: hidden;
+
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    transform: translateX(-200%);
+    transition: all .5s;
+
+    max-width: 800px;
+}
+
+
+.componentActive{
+    transform: translateY(0);
+}
+
+/* HEADER */
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 80;
+}
+
+.headerIcon{
+    font-size: 2.5rem;
+}
+
+.imgProfile{
+    background-color: var(--colorMain);
+    width: 50px;
+    height: 50px;
+    border-radius: 100px;
+    background-image: url('../img/profile13.jpg');
+    background-size: cover;
+}
+
+/* NAV */
+.nav{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 20px 10px;
+    box-shadow: 0px -4px 4px rgba(0, 0, 0, 0.25);
+    z-index: 10;
+    transform: translateY(200px);
+    transition: transform .3s;
+
+}
+
+.nav_item{
+    font-size: 1.5rem;
+}
+
+.nav_active{
+    transform: translateY(0);
+}
+
+/* SCREEN LODING */
+
+.screenLoding{
+    display: block;
+    width: 100%;
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background-image: url('../img/ScreenLoding.png');
+}
+
+.quoteDay{
+    font-size: 1.5rem;
+}
+
+.lodign{
+    font-size: 1.1rem;
+}
+
+/* SING IN */
+
+.singIn{
+    padding-top: 20px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 50px;
+    overflow-y: scroll;
+    z-index: 50;
+}
+
+.singIn_imgProfile{
+    width: 200px;
+    height: 200px;
+    min-height: 200px;
+    box-shadow: var(--shadowComponent);
+    background-image: url('../img/profile13.jpg');
+    background-size: cover;
+
+}
+
+.createProfile_input{
+    width: 90%;
+    padding: 20px;
+    border: none;
+    border-bottom: 1px solid black;
+    color: var(--black);
+    text-align: center;
+}
+
+.createProfile_input--error{
+    border-color: red;
+}
+
+.createProfile_input:focus{
+    border: none;
+    box-shadow: none;
+    background-color: none;
+}
+
+.photosProfile{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.profile{
+    width: 80px;
+    height: 80px;
+    border-radius: 100%;
+    border: 1px solid var(--black);
+    box-shadow: var(--shadowComponent);
+    background-size: cover;
+}
+
+.button{
+    width: 90%;
+    background-color: var(--colorMain);
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: var(--shadowComponent);
+}
+
+
+/* TIME */
+.time{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    gap: 50px;
+    overflow-y: scroll;
+}
+
+.cardTime{
+    width: 80%;
+    text-align: center;
+    padding: 30px 0;
+    background-color: var(--white);
+    border: 2px solid var(--black);
+    box-shadow: 15px 15px 0 var(--colorMain);
+    font-size: var(--large);
+}
+
+
+/* LETTER */
+.sectionLetter{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.letter{
+    display: flex;
+    gap: 20px;
+    background-color: var(--colorLigth);
+    padding: 20px;
+    border-radius: var(--border);
+    box-shadow: var(--shadowComponent);
+}
+
+/* MUSIC */
+
+.music{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-items: ce;
+    gap: 20px;
+    overflow-y: scroll;
+
+}
+
+
+.photoAlbum{
+    border-radius: var(--border);
+    height: 300px;
+    width: 300px;
+    margin: 0 auto;
+}
+
+.albumName{
+    text-align: center;
+    font-size: var(--large);
+}
+
+audio{
+    width: 95%;
+}
+.buttonMusic{
+    width: 95%;
+    text-align: center;
+    color: var(--white);
+}
+
+.componentCancion_icon{
+    background-color: var(--colorLigth);
+}
+/* QUEJAS */
+.quejas{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.conteinerQuejas{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.componentQueja{
+    background-color: var(--colorLigth);
+    padding: 20px;
+    border-radius: var(--border);
+    box-shadow: var(--shadowComponent);
+}
+
+.messaje{
+    display: flex;
+    justify-content: space-between;
+    gap: 5px;
+    position: fixed;
+    bottom: 100px;
+    width: 100%;
+    background-color: var(--white);
+}
+
+.messajeInput{
+    display: block;
+    padding: 10px;
+    width: 100%;
+    border-radius: var(--border);
+}
+
+.buttonQuejas{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    width: 50px;
+    background-color: var(--colorMain);
+    border-radius: 100%;
+}
+
+.buttonQuejas_icon{
+    color: var(--white);
+}
+
+
+.profile1{
+    background-image: url('../img/profile1.jpg');
+}
+.profile2{
+    background-image: url('../img/profile2.jpg');
+}
+.profile3{
+    background-image: url('../img/profile3.jpg');
+}
+.profile4{
+    background-image: url('../img/profile4.jpg');
+}
+.profile5{
+    background-image: url('../img/profile5.jpg');
+}
+.profile6{
+    background-image: url('../img/profile6.jpg');
+}
+.profile7{
+    background-image: url('../img/profile7.jpg');
+}
+.profile8{
+    background-image: url('../img/profile8.jpg');
+}
+.profile9{
+    background-image: url('../img/profile9.jpg');
+}
+.profile10{
+    background-image: url('../img/profile10.jpg');
+}
+.profile11{
+    background-image: url('../img/profile11.jpg');
+}
+.profile12{
+    background-image: url('../img/profile12.jpg');
+}
+.profile13{
+    background-image: url('../img/profile13.jpg');
+}
+.profile14{
+    background-image: url('../img/profile14.jpg');
+}
+.profile15{
+    background-image: url('../img/profile15.jpg');
+}
+.profile16{
+    background-image: url('../img/profile16.jpg');
+}

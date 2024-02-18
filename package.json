@@ -1,0 +1,12 @@
+{
+  "name": "app-infinito",
+  "version": "1.0.0",
+  "description": "App for my girfriend",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Axel Velasco Chavez",
+  "license": "ISC"
+}
