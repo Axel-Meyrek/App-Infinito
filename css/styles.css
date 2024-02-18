@@ -43,6 +43,7 @@
     color: var(--black);
     font-weight: var(--regular);
     font-size: var(--small);
+    transition: scale .3s;
 }
 
 ::-webkit-scrollbar{
@@ -142,6 +143,10 @@ button{
 
 .nav_active{
     transform: translateY(0);
+}
+
+.buttonActive{
+    scale: 1.8;
 }
 
 /* SCREEN LODING */

@@ -16,7 +16,11 @@ import {
     conteinerSegundos,
     profileHeader,
     profileSingIn,
-    nav
+    nav,
+    buttonTime,
+    buttonLetter,
+    buttonMusic,
+    buttonQuejas
 } from "./componentes.js"
 
 //FUNCIONES
@@ -29,6 +33,7 @@ export const hideComponents = () => {
 
 export const showTime = () => {
     hideComponents()
+    buttonActiveTime()
     setInterval(calcularTiempoPasado, 1000)
     sectionTime.classList.add('componentActive')
 }
@@ -36,12 +41,14 @@ export const showTime = () => {
 export const showLetter = e => {
     e.preventDefault()
     hideComponents()
+    buttonActiveLetter()
     sectionLetter.classList.add('componentActive')
 }
 
 export const showMusic = e => {
     e.preventDefault()
     hideComponents()
+    buttonActiveMusic()
     sectionMusic.classList.add('componentActive')
 
 }
@@ -49,6 +56,7 @@ export const showMusic = e => {
 export const showQuejas = e => {
     e.preventDefault()
     hideComponents()
+    buttonActiveQuejas()
     sectionQuejas.classList.add('componentActive')
 }
 
@@ -163,4 +171,31 @@ export const showNav = () => {
 
 export const hideNav = () => {
     nav.classList.remove('nav_active')
+}
+
+export const buttonsdeactivate = () => {
+    buttonTime.classList.remove('buttonActive')
+    buttonLetter.classList.remove('buttonActive')
+    buttonMusic.classList.remove('buttonActive')
+    buttonQuejas.classList.remove('buttonActive')
+}
+
+export const buttonActiveTime = () => {
+    buttonsdeactivate()
+    buttonTime.classList.add('buttonActive')
+}
+
+export const buttonActiveLetter = () => {
+    buttonsdeactivate()
+    buttonLetter.classList.add('buttonActive')
+}
+
+export const buttonActiveMusic = () => {
+    buttonsdeactivate()
+    buttonMusic.classList.add('buttonActive')
+}
+
+export const buttonActiveQuejas = () => {
+    buttonsdeactivate()
+    buttonQuejas.classList.add('buttonActive')
 }
